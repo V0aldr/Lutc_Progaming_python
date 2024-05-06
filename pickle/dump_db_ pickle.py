@@ -2,7 +2,7 @@ import pickle
 
 from pprint import pprint
 
-with open('people_pickle', 'rb') as dbfile:
+with open('../people_pickle', 'rb') as dbfile:
     db = pickle.load(dbfile)
     for key in db:
         pprint(f"{key} => {db[key]}")

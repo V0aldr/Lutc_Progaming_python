@@ -1,8 +1,8 @@
 # инициализировать данные для последующего сохранения в файлах
 # записи
-bob = {'name': 'Bob Smith', 'age': 42, 'pay': 30000, 'job': 'dev'}
-sue = {'name': 'Sue Jones', 'age': 45, 'pay': 40000, 'job': 'hdw'}
-tom = {'name': 'Tom', 'age': 50, 'pay': 0, 'job': None}
+bob = {'name': 'Bob Smith', 'age': 42, 'pay': round(30000.00, 2), 'job': 'dev'}
+sue = {'name': 'Sue Jones', 'age': 45, 'pay': round(40000.00, 2), 'job': 'hdw'}
+tom = {'name': 'Tom', 'age': 50, 'pay': round(0.00, 2), 'job': None}
 
 # база данных
 db = {}
