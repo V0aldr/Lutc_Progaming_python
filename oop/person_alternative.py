@@ -49,4 +49,4 @@ if __name__ == '__main__':
 
 
 
-print(f"\n{'----END':-<82}\n")
+    print(f"\n{'----END':-<82}\n")
