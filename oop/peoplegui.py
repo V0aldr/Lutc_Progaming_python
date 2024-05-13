@@ -21,7 +21,7 @@ def make_widgets():
     window.title('People shelve')
     window.minsize(220, 160)
     form = Frame(window)
-    form.pack()
+    form.pack(padx=10, pady=5)
 
     entries = {}
     for (ix, label) in enumerate(('key',) + field_names):
@@ -31,9 +31,9 @@ def make_widgets():
         ent.grid(row=ix, column=1)
         entries[label] = ent
 
-    Button(window, text='Fetch', command=fetch_record).pack(side=LEFT)
+    Button(window, text='Fetch', command=fetch_record).pack(side=LEFT, padx=10, pady=5)
     Button(window, text='Update', command=update_record).pack(side=LEFT)
-    Button(window, text='Quit', command=window.quit).pack(side=RIGHT)
+    Button(window, text='Quit', command=window.quit).pack(side=RIGHT, padx=10, pady=5)
 
     return window
 
@@ -56,7 +56,8 @@ def update_record():
         record = db[key]  # изменяется существующая запись
     else:
         from person_start import Person  # создать/сохранить новую запись
-        record = Person(name='None', job='None')
+        record = Person(name='Unknown', job='Unknown')      #eval: строки должны
+                                                            # заключаться в кавычки
 
     for field in field_names:
         setattr(record, field, eval(entries[field].get()))
