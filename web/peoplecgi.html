@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>People Input Form</title>
 </head>
 <body>
-
+<form action="cgi-bin/peoplecgi.py" method="post">
+    <table>
+        <tr>
+            <th>key
+            <td><input type="text" name="key">
+        <tr>
+            <th>name
+            <td><input type="text" name="name">
+        <tr>
+            <th>age
+            <td><input type="text" name="age">
+        <tr>
+            <th>job
+            <td><input type="text" name="job">
+        <tr>
+            <th>pay
+            <td><input type="text" name="pay">
+    </table>
+    <p>
+        <input type="submit" value="Fetch" name="action">
+        <input type="submit" value="Update" name="action">
+</form>
 </body>
 </html>
