@@ -10,18 +10,21 @@ class MyGui:
     def __init__(self):
         # НАстройки окна
         self.main_window = tkinter.Tk()
+
         # Картинка для окна
-        photo = tkinter.PhotoImage(file='123.png')
-        self.main_window.iconphoto(False, photo)
+        # photo = tkinter.PhotoImage(file='123.png')
+        # self.main_window.iconphoto(False, photo)
         # self.main_window.iconbitmap('tree.ico')
         self.size = '1000x1000+600+75'
         self.main_window.geometry(self.size)
         self.main_window.config(background='#85B2AF')
+
         # Прозрачность окна
         self.main_window.attributes('-alpha', 1)
         # Окно ВСЕГДА поверх других окон
         self.main_window.attributes('-topmost', True)
         self.main_window.resizable(False, False)
+
         # Окно без рамки
         self.main_window.overrideredirect(False)
         self.main_window.title(f'ТКинтер {self.size}')
